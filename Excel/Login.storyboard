@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QvV-Xq-MEn">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="xaa-zo-HdE">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="QvV-Xq-MEn" customClass="LoginVC" customModule="Excel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AZ6-f5-tYi"/>
+                        <viewControllerLayoutGuide type="bottom" id="koo-5C-YIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FQx-qU-fTz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gK-dK-rbK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRb-09-0dD" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X6U-AH-F7H">
+                                                <rect key="frame" x="0.0" y="49" width="320" height="129"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="129" id="YKu-Zq-ucF"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Salesman Id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tod-VD-nZZ">
+                                                <rect key="frame" x="35" y="211" width="250" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="4oy-dv-B3k"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="QvV-Xq-MEn" id="fTC-jQ-NpP"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1t7-T8-RKn">
+                                                <rect key="frame" x="35" y="249" width="250" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="cbt-kO-NbW"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="QvV-Xq-MEn" id="0Eq-8n-rI9"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxr-rt-hOh">
+                                                <rect key="frame" x="35" y="295" width="250" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="vc3-nt-j3D"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <state key="normal" title="LOGIN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginButtonTouchUpInside:" destination="QvV-Xq-MEn" eventType="touchUpInside" id="j2F-mA-kgb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.9209553599357605" green="0.06509273499250412" blue="0.037456121295690536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tod-VD-nZZ" secondAttribute="trailing" constant="35" id="110-UN-PfU"/>
+                                            <constraint firstItem="1t7-T8-RKn" firstAttribute="top" secondItem="tod-VD-nZZ" secondAttribute="bottom" constant="8" id="2iX-Uo-NfC"/>
+                                            <constraint firstItem="wxr-rt-hOh" firstAttribute="leading" secondItem="HRb-09-0dD" secondAttribute="leading" constant="35" id="712-uw-5pb"/>
+                                            <constraint firstItem="X6U-AH-F7H" firstAttribute="top" secondItem="HRb-09-0dD" secondAttribute="top" constant="49" id="HrK-hR-1oc"/>
+                                            <constraint firstItem="1t7-T8-RKn" firstAttribute="leading" secondItem="HRb-09-0dD" secondAttribute="leading" constant="35" id="MU5-ov-cCb"/>
+                                            <constraint firstItem="wxr-rt-hOh" firstAttribute="top" secondItem="1t7-T8-RKn" secondAttribute="bottom" constant="16" id="Q1m-8D-akW"/>
+                                            <constraint firstAttribute="trailing" secondItem="wxr-rt-hOh" secondAttribute="trailing" constant="35" id="Ue4-fZ-8eF"/>
+                                            <constraint firstItem="tod-VD-nZZ" firstAttribute="top" secondItem="X6U-AH-F7H" secondAttribute="bottom" constant="33" id="WD9-J2-RId"/>
+                                            <constraint firstItem="X6U-AH-F7H" firstAttribute="leading" secondItem="HRb-09-0dD" secondAttribute="leading" id="XZv-1S-KeH"/>
+                                            <constraint firstAttribute="trailing" secondItem="1t7-T8-RKn" secondAttribute="trailing" constant="35" id="ZfD-FJ-7fc"/>
+                                            <constraint firstItem="tod-VD-nZZ" firstAttribute="leading" secondItem="HRb-09-0dD" secondAttribute="leading" constant="35" id="meb-lY-EnN"/>
+                                            <constraint firstAttribute="trailing" secondItem="X6U-AH-F7H" secondAttribute="trailing" id="poH-IJ-PGE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HRb-09-0dD" secondAttribute="bottom" id="9e7-DO-iKm"/>
+                                    <constraint firstItem="HRb-09-0dD" firstAttribute="leading" secondItem="6gK-dK-rbK" secondAttribute="leading" id="MQU-aU-2UQ"/>
+                                    <constraint firstItem="HRb-09-0dD" firstAttribute="centerX" secondItem="6gK-dK-rbK" secondAttribute="centerX" id="hfj-77-3bC"/>
+                                    <constraint firstItem="HRb-09-0dD" firstAttribute="top" secondItem="6gK-dK-rbK" secondAttribute="top" id="kcY-af-BQn"/>
+                                    <constraint firstItem="HRb-09-0dD" firstAttribute="centerY" secondItem="6gK-dK-rbK" secondAttribute="centerY" id="sSs-8H-ThQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HRb-09-0dD" secondAttribute="trailing" id="shO-dH-Pmz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6gK-dK-rbK" firstAttribute="leading" secondItem="FQx-qU-fTz" secondAttribute="leading" id="dBa-HI-Ihm"/>
+                            <constraint firstAttribute="trailing" secondItem="6gK-dK-rbK" secondAttribute="trailing" id="p0S-gf-IQa"/>
+                            <constraint firstItem="6gK-dK-rbK" firstAttribute="bottom" secondItem="koo-5C-YIe" secondAttribute="top" id="sMA-mn-2Iz"/>
+                            <constraint firstItem="6gK-dK-rbK" firstAttribute="top" secondItem="FQx-qU-fTz" secondAttribute="top" id="xzg-Ru-Jo8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButtonOutlet" destination="wxr-rt-hOh" id="DP7-dB-Rps"/>
+                        <outlet property="logoImageView" destination="X6U-AH-F7H" id="FpX-sw-u2b"/>
+                        <outlet property="textField1" destination="tod-VD-nZZ" id="JiM-n8-6Zx"/>
+                        <outlet property="textField2" destination="1t7-T8-RKn" id="P4j-r9-q3l"/>
+                        <outlet property="userScrollView" destination="6gK-dK-rbK" id="YQe-Uj-pLY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Bo-gF-GmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442.5" y="342.25352112676057"/>
+        </scene>
+    </scenes>
+</document>
